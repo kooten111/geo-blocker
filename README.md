@@ -112,7 +112,7 @@ The script provides detailed information about its actions:
 - Loopback and local network access is preserved to ensure system functionality
 - Only the specified country's IP ranges are allowed for incoming connections
 
-⚠️ AI-Generated Code Disclaimer
+## ⚠️ AI-Generated Code Disclaimer
 IMPORTANT: This script was generated with the assistance of artificial intelligence. Before deploying this script in a production environment, it is strongly recommended to Thoroughly review all code and understand each command's purpose
 
 The author of this repository cannot guarantee the script's perfect functionality across all environments and use cases.
