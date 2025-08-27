@@ -32,7 +32,7 @@
 # ==============================================================================
 
 # --- Configuration ---
-COUNTRY_CODE="se" # se = Sweden
+COUNTRY_CODE="" # se = Sweden
 IP_LIST_URL="http://www.ipdeny.com/ipblocks/data/countries/${COUNTRY_CODE}.zone"
 LOCAL_NETWORKS="192.168.0.0/16 10.0.0.0/8 172.16.0.0/12" # Adjust as needed
 
@@ -69,8 +69,17 @@ check_root() {
   fi
 }
 
+check_country() {
+  if [[ -z $COUNTRY_CODE ]]; then
+    echo "ERROR: No country code was defined."
+    echo "REMINDER: Valid country codes can be found here: https://www.ipdeny.com/ipblocks/"
+    exit 1
+  fi
+}
+
 # --- Pre-run Checks ---
 check_root
+check_country
 check_command ufw
 check_command wget
 check_command grep
