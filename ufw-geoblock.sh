@@ -77,8 +77,17 @@ check_country() {
   fi
 }
 
+load_environment() {
+  if [[ -f $PWD/.env ]]; then
+    . .env
+  else
+    echo "NOTICE: There is no .env file in the current working directory"
+  fi
+}
+
 # --- Pre-run Checks ---
 check_root
+load_environment
 check_country
 check_command ufw
 check_command wget
