@@ -51,7 +51,11 @@ A Bash script to dynamically manage UFW (Uncomplicated Firewall) rules for geo-b
 Edit the following variables at the top of the script to customize its behavior:
 
 ```bash
-# Country to allow (ISO code)
+# Configuration via .env file (recommended)
+# Create a .env file in the same directory:
+COUNTRY_CODE=se
+
+# Or modify the script directly (not recommended):
 COUNTRY_CODE="se"  # se = Sweden
 
 # IP list source
